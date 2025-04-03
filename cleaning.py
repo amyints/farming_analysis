@@ -45,4 +45,4 @@ if __name__ == "__main__":
     clean_df, top_3_crops = data_cleaning(df_path)
     print(f"Top 3 crops by yield: {top_3_crops}")
 
-    clean_df.to_csv("./data/cleaned_agriculture_dataset.csv", index=False )
+    
