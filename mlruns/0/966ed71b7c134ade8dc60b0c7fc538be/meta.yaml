@@ -1,0 +1,15 @@
+artifact_uri: file:///home/amyint/miniconda3/Farming/farming_analysis/mlruns/0/966ed71b7c134ade8dc60b0c7fc538be/artifacts
+end_time: 1743700831998
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 966ed71b7c134ade8dc60b0c7fc538be
+run_name: legendary-horse-147
+run_uuid: 966ed71b7c134ade8dc60b0c7fc538be
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743687621613
+status: 4
+tags: []
+user_id: amyint
