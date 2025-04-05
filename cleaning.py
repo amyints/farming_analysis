@@ -35,6 +35,8 @@ def data_cleaning(df_path):
     # Create a new column for the Fertilizer Usage to Crop Yield ratio
     clean_df['fertilizer_to_yield_ratio'] = clean_df['Fertilizer_Used(tons)'] / clean_df['Yield(tons)']
     clean_df['pesticide_to_yield_ratio'] = clean_df['Pesticide_Used(kg)'] / clean_df['Yield(tons)']
+    clean_df['water_to_yield_ratio'] = clean_df['Water_Usage(cubic meters)'] / clean_df['Yield(tons)']
+
 
     # Select top 3 crops
     popular_by_yield = clean_df.groupby('Crop_Type')['Yield(tons)'].sum().sort_values(ascending=False)
