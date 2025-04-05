@@ -2,7 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import scipy
 from scipy import stats
+from scipy.stats import pearsonr
 
 
 
@@ -46,4 +48,3 @@ if __name__ == "__main__":
     clean_df, top_3_crops = data_cleaning(df_path)
     print(f"Top 3 crops by yield: {top_3_crops}")
 
-    
