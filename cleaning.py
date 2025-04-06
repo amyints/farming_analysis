@@ -30,7 +30,7 @@ def data_cleaning(df_path):
     clean_df = clean_df[clean_df['z_score'] <= 3]
 
     # Categorical Encoding
-    clean_df = pd.get_dummies(clean_df, columns=['Irrigation_Type', 'Soil_Type'])
+    #clean_df = pd.get_dummies(clean_df, columns=['Irrigation_Type', 'Soil_Type'])
 
     # Create a new column for the Fertilizer Usage to Crop Yield ratio
     clean_df['fertilizer_to_yield_ratio'] = clean_df['Fertilizer_Used(tons)'] / clean_df['Yield(tons)']
