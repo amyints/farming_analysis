@@ -1,5 +1,6 @@
-from scipy.stats import pearsonr
+from scipy.stats import pearsonr, f_oneway
 
+# FERTILIZER CORRELATION
 def fertilizer_correlation(df, crop_name):
     crop_df = df[df['Crop_Type'] == crop_name]
     corr, pval = pearsonr(crop_df['fertilizer_to_yield_ratio'], crop_df['Yield(tons)'])
@@ -34,6 +35,7 @@ def fertilizer_correlation(df, crop_name):
 
     return
 
+# PESTICIDE CORRELATION
 def pesticide_correlation(df, crop_name):
     crop_df = df[df['Crop_Type'] == crop_name]
     corr, pval = pearsonr(crop_df['pesticide_to_yield_ratio'], crop_df['Yield(tons)'])
@@ -68,6 +70,7 @@ def pesticide_correlation(df, crop_name):
 
     return
     
+# WATER CORRELATION
 def water_correlation(df, crop_name):
     crop_df = df[df['Crop_Type'] == crop_name]
     corr, pval = pearsonr(crop_df['water_to_yield_ratio'], crop_df['Yield(tons)'])
@@ -101,3 +104,29 @@ def water_correlation(df, crop_name):
         print(f"There is a perfect, negative correlation between water usage and {crop_name} yield.\n")
 
     return
+
+# IRRIGATION TYPE CORRELATION
+def irrigation_correlation(df, crop_name):
+    crop_df = df[df['Crop_Type'] == crop_name]
+    groups = [group['Yield(tons)'].values for name, group in crop_df.groupby('Irrigation_Type')]
+    fstat, pval = f_oneway(*groups)
+    print(f"ANOVA for Irrigation Type ({crop_name}): F = {fstat:.2f}, p = {pval:.2f}")
+
+    if pval > 0.05:
+        print(f"The P-Value suggests that the differences in {crop_name} yield between irrigation types is not statistically significant.\n")
+    else:
+        print(f"The P-Value suggests that the differences in {crop_name} yield between irrigation types is statistically significant.\n")
+
+    return fstat, pval
+
+# SOIL TYPE CORRELATION
+def soil_correlation(df, crop_name):
+    crop_df = df[df['Crop_Type'] == crop_name]
+    groups = [group['Yield(tons)'].values for name, group in crop_df.groupby('Soil_Type')]
+    fstat, pval = f_oneway(*groups)
+    print(f"ANOVA for Soil Type ({crop_name}): F = {fstat:.2f}, p = {pval:.2f}")
+
+    if pval > 0.05:
+        print(f"The P-Value suggests that the differences in {crop_name} yield between soil types is not statistically significant.\n")
+    else:
+        print(f"The P-Value suggests that the differences in {crop_name} yield between soil types is statistically significant.\n")
