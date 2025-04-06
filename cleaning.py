@@ -29,8 +29,6 @@ def data_cleaning(df_path):
     # Remove Outliers
     clean_df = clean_df[clean_df['z_score'] <= 3]
 
-    # Categorical Encoding
-    #clean_df = pd.get_dummies(clean_df, columns=['Irrigation_Type', 'Soil_Type'])
 
     # Create a new column for the Fertilizer Usage to Crop Yield ratio
     clean_df['fertilizer_to_yield_ratio'] = clean_df['Fertilizer_Used(tons)'] / clean_df['Yield(tons)']
@@ -43,6 +41,9 @@ def data_cleaning(df_path):
     top_3_crops = popular_by_yield.head(3).index.tolist()
     print(f"Top 3 crops by yield: {top_3_crops}")
 
-    return clean_df, top_3_crops
+    # Create encoded dataset for modeling
+    encoded_df = pd.get_dummies(clean_df, columns=['Irrigation_Type', 'Soil_Type'])
+
+    return clean_df, top_3_crops, encoded_df
 
 
