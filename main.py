@@ -1,5 +1,6 @@
 from cleaning import data_cleaning
 from analysis import fertilizer_correlation, pesticide_correlation, water_correlation, irrigation_correlation, soil_correlation
+from model.modeling import data_modeling
 
 # clean data using cleaning.py
 df_path = "./data/agriculture_dataset.csv"
