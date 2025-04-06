@@ -40,3 +40,6 @@ irrigation_correlation(clean_df, top_3_crops[2])
 soil_correlation(clean_df, top_3_crops[0])
 soil_correlation(clean_df, top_3_crops[1])
 soil_correlation(clean_df, top_3_crops[2])
+
+# Data Modeling
+data_modeling(encoded_df)
