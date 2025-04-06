@@ -45,8 +45,4 @@ def data_cleaning(df_path):
 
     return clean_df, top_3_crops
 
-if __name__ == "__main__":
-    df_path = "./data/agriculture_dataset.csv"
-    clean_df, top_3_crops = data_cleaning(df_path)
-    print(f"Top 3 crops by yield: {top_3_crops}")
 
