@@ -12,7 +12,12 @@ def data_modeling(df):
     model = LinearRegression()
     model.fit(X_train, y_train)
     predictions = model.predict(X_test)
+    r2 = r2_score(y_test, predictions)
+    mae = mean_absolute_error(y_test, predictions)
+    rsme = root_mean_squared_error(y_test, predictions, squared=False)
 
-    print(f"R-Squared: {r2_score(y_test, predictions)}")
+    print(f"R-Squared: {r2}")
     print(f"MAE: {mean_absolute_error(y_test, predictions)}")
-    print(f"RSME: {root_mean_squared_error(y_test, predictions, squared=False)}")
+    print(f"RSME: {rsme}")
+
+    return 
