@@ -5,14 +5,8 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, StackingRegressor, ExtraTreesRegressor
 import numpy as np
 
-def data_modeling(df, crops):
+def data_modeling(df):
 
-    param_grid = {
-        'n_estimators': [50, 100, 200],
-        'max_depth': [None, 10, 20, 30],
-        'min_samples_split': [2, 5, 10],
-        'min_samples_leaf': [1, 2, 4]
-    }
     # Prepare features and target
     X = df[['pesticide_to_yield_ratio', 'fertilizer_to_yield_ratio', 'water_to_yield_ratio']]
     y = df['Yield(tons)']
