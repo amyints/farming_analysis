@@ -11,15 +11,25 @@ def simulate(df, model):
 
     # Create a grid of all combinations
     scenarios = pd.DataFrame(
-        [(p, f, w) for p in pesticide_range for f in fertilizer_range for w in water_range],
-        columns=['Pesticide_Used(kg)', 'Fertilizer_Used(tons)', 'Water_Usage(cubic meters)']
+        [(f, p, w) for f in fertilizer_range for p in pesticide_range for w in water_range],
+        columns=[ 'Fertilizer_Used(tons)', 'Pesticide_Used(kg)', 'Water_Usage(cubic meters)']
     )
 
+    # Compute ratio features
     epsilon = 1e-6
     scenarios['pesticide_to_yield_ratio'] = scenarios['Pesticide_Used(kg)'] / (scenarios['Fertilizer_Used(tons)'] + epsilon)
     scenarios['fertilizer_to_yield_ratio'] = scenarios['Fertilizer_Used(tons)'] / (scenarios['Water_Usage(cubic meters)'] + epsilon)
     scenarios['water_to_yield_ratio'] = scenarios['Water_Usage(cubic meters)'] / (scenarios['Pesticide_Used(kg)'] + epsilon)
     
+    # Order columns to match training
+    scenarios = scenarios[
+        ['Fertilizer_Used(tons)',
+        'Pesticide_Used(kg)',
+        'Water_Usage(cubic meters)',
+        'pesticide_to_yield_ratio',
+        'fertilizer_to_yield_ratio',
+        'water_to_yield_ratio']
+    ]
     # Predict yield for each scenario
     scenarios['predicted_yield'] = model.predict(scenarios)
 
