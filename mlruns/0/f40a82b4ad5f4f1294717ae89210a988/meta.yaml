@@ -1,0 +1,15 @@
+artifact_uri: file:///home/amyint/miniconda3/Farming/farming_analysis/mlruns/0/f40a82b4ad5f4f1294717ae89210a988/artifacts
+end_time: 1744156859770
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f40a82b4ad5f4f1294717ae89210a988
+run_name: abundant-donkey-5
+run_uuid: f40a82b4ad5f4f1294717ae89210a988
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744156550154
+status: 4
+tags: []
+user_id: amyint

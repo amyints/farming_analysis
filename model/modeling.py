@@ -49,4 +49,4 @@ def data_modeling(df):
     print(f"MAE: {mae:.2f}")
     print(f"RMSE: {rmse:.2f}")
 
-    return predictions, y_test
+    return model, predictions, y_test
