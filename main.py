@@ -1,6 +1,7 @@
 from cleaning import data_cleaning
 from analysis import fertilizer_correlation, pesticide_correlation, water_correlation, irrigation_correlation, soil_correlation
 from model.modeling import data_modeling
+from model.simulating import simulate
 
 # clean data using cleaning.py
 df_path = "./data/agriculture_dataset.csv"
@@ -111,3 +112,4 @@ print(f"Crops with a statistically significant correlation with soil type: {soil
 print(f"Crops with no statistically significant correlation with soil type: {soil_not_stat_sig}")
 print('')
 data_modeling(clean_df)
+
