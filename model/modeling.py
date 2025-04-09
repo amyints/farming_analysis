@@ -20,7 +20,7 @@ def data_modeling(df):
         ('rf', RandomForestRegressor(n_estimators=200, max_depth=10, min_samples_split=10, max_features='sqrt', random_state=42)),
         ('gb', GradientBoostingRegressor(n_estimators=200, learning_rate=0.3, random_state=42)),
         ('et', ExtraTreesRegressor(n_estimators=100, random_state=42)),
-        ('knn', KNeighborsRegressor(n_neighbors=7)),
+        #('knn', KNeighborsRegressor(n_neighbors=7)),
     ]
 
     # Meta learner
