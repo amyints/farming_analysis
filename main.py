@@ -114,4 +114,4 @@ print('')
 
 model, predictions, X_train, X_test, y_train, y_test = data_modeling(clean_df)
 
-simulate(clean_df, model)
+#simulate(clean_df, model)

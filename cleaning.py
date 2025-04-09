@@ -34,6 +34,9 @@ def data_cleaning(df_path):
     clean_df['fertilizer_to_yield_ratio'] = clean_df['Yield(tons)'] / clean_df['Fertilizer_Used(tons)']
     clean_df['pesticide_to_yield_ratio'] = clean_df['Yield(tons)'] / clean_df['Pesticide_Used(kg)']
     clean_df['water_to_yield_ratio'] = clean_df['Yield(tons)'] / clean_df['Water_Usage(cubic meters)']
+    clean_df['fertilizer_to_acre_ratio'] = clean_df['Farm_Area(acres)'] / clean_df['Fertilizer_Used(tons)']
+    clean_df['pesticide_to_acre_ratio'] = clean_df['Farm_Area(acres)'] / clean_df['Pesticide_Used(kg)']
+    clean_df['water_to_acre_ratio'] = clean_df['Farm_Area(acres)'] / clean_df['Water_Usage(cubic meters)']
 
 
     # Select top 3 crops
