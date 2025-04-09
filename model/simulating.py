@@ -26,8 +26,8 @@ def simulate(df, model):
         ['Fertilizer_Used(tons)',
         'Pesticide_Used(kg)',
         'Water_Usage(cubic meters)',
-        'pesticide_to_yield_ratio',
         'fertilizer_to_yield_ratio',
+        'pesticide_to_yield_ratio',
         'water_to_yield_ratio']
     ]
     # Predict yield for each scenario

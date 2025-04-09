@@ -11,7 +11,7 @@ import pandas as pd
 def data_modeling(df):
 
     # Prepare features and target
-    X = df[['Fertilizer_Used(tons)', 'Pesticide_Used(kg)', 'Water_Usage(cubic meters)', 'pesticide_to_yield_ratio', 'fertilizer_to_yield_ratio', 'water_to_yield_ratio']]
+    X = df[['Fertilizer_Used(tons)', 'Pesticide_Used(kg)', 'Water_Usage(cubic meters)', 'fertilizer_to_yield_ratio', 'pesticide_to_yield_ratio', 'water_to_yield_ratio']]
     y = df['Yield(tons)']
 
 
