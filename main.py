@@ -111,5 +111,7 @@ soil_not_stat_sig.append(soil_not_stat_sig3)
 print(f"Crops with a statistically significant correlation with soil type: {soil_stat_sig}")
 print(f"Crops with no statistically significant correlation with soil type: {soil_not_stat_sig}")
 print('')
-data_modeling(clean_df)
 
+model, predictions, X_train, X_test, y_train, y_test = data_modeling(clean_df)
+
+simulate(clean_df, model)
