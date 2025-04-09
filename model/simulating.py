@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from modeling import data_modeling
+from model.modeling import data_modeling
 
 def simulate(df, model):
 
@@ -12,8 +12,10 @@ def simulate(df, model):
     # Create a grid of all combinations
     scenarios = pd.DataFrame(
         [(p, f, w) for p in pesticide_range for f in fertilizer_range for w in water_range],
-        columns=['pesticide_to_yield_ratio' 'fertilizer_to_yield_ratio', 'water_to_yield_ratio']
+        columns=['pesticide_to_yield_ratio', 'fertilizer_to_yield_ratio', 'water_to_yield_ratio']
     )
 
     # Predict yield for each scenario
     scenarios['predicted_yield'] = model.predict(scenarios)
+
+    return scenarios
