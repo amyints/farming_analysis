@@ -1,6 +1,6 @@
 from cleaning import data_cleaning
 from analysis import fertilizer_correlation, pesticide_correlation, water_correlation, irrigation_correlation, soil_correlation
-from model.modeling import data_modeling
+from model.modeling_test import data_modeling
 from model.simulating import simulate
 
 # clean data using cleaning.py
@@ -114,4 +114,4 @@ print('')
 
 model, predictions, X_train, X_test, y_train, y_test = data_modeling(clean_df)
 
-simulate(clean_df, model)
+# simulate(clean_df, model)
