@@ -1,0 +1,15 @@
+artifact_uri: file:///home/amyint/miniconda3/Farming/farming_analysis/mlruns/0/471969cbb6f745518261b1814981e79d/artifacts
+end_time: 1744226474712
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 471969cbb6f745518261b1814981e79d
+run_name: able-hawk-538
+run_uuid: 471969cbb6f745518261b1814981e79d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744168806152
+status: 4
+tags: []
+user_id: amyint

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/amyint/miniconda3/Farming/farming_analysis/mlruns/0/380f58da4030443cbc715cf481f95def/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 380f58da4030443cbc715cf481f95def
+run_name: tasteful-loon-76
+run_uuid: 380f58da4030443cbc715cf481f95def
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744226488206
+status: 1
+tags: []
+user_id: amyint

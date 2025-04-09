@@ -1,0 +1,15 @@
+artifact_uri: file:///home/amyint/miniconda3/Farming/farming_analysis/mlruns/0/37497dbf27ef43039944ab2692a3f708/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 37497dbf27ef43039944ab2692a3f708
+run_name: funny-cat-279
+run_uuid: 37497dbf27ef43039944ab2692a3f708
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744164819716
+status: 1
+tags: []
+user_id: amyint
