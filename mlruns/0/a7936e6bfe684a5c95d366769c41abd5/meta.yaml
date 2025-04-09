@@ -1,0 +1,15 @@
+artifact_uri: file:///home/amyint/miniconda3/Farming/farming_analysis/mlruns/0/a7936e6bfe684a5c95d366769c41abd5/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a7936e6bfe684a5c95d366769c41abd5
+run_name: rare-auk-172
+run_uuid: a7936e6bfe684a5c95d366769c41abd5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744157964332
+status: 1
+tags: []
+user_id: amyint
