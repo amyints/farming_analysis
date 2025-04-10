@@ -5,10 +5,10 @@ from model.simulating import simulate
 
 # clean data using cleaning.py
 df_path = "./data/agriculture_dataset.csv"
-clean_df, top_3_crops, encoded_df = data_cleaning(df_path)
+clean_df, top_3_crops = data_cleaning(df_path)
 print(f"These top 3 crop will be referenced to analyze: {top_3_crops}")
 clean_df.to_csv("./data/cleaned_agriculture_dataset.csv", index=False)
-encoded_df.to_csv("./data/encoded_agriculter_dataset.csv", index=False)
+#encoded_df.to_csv("./data/encoded_agriculter_dataset.csv", index=False)
 
 # Fertilizer Correlation and Statistical Significance
 print("---FERTILIZER CORRELATION---")
@@ -114,4 +114,4 @@ print('')
 
 model, predictions, X_train, X_test, y_train, y_test = data_modeling(clean_df)
 
-#simulate(clean_df, model)
+simulate(clean_df, model)
