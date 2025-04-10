@@ -14,15 +14,15 @@ clean_df.to_csv("./data/cleaned_agriculture_dataset.csv", index=False)
 print("---FERTILIZER CORRELATION---")
 fert_stat_sig = []
 fert_not_stat_sig = []
-fert_stat_sig1, fert_not_stat_sig1 = fertilizer_correlation(clean_df, f"{top_3_crops[0]}")
+fert_stat_sig1, fert_not_stat_sig1, fcorr1, fpval1 = fertilizer_correlation(clean_df, f"{top_3_crops[0]}")
 fert_stat_sig.append(fert_stat_sig1)
 fert_not_stat_sig.append(fert_not_stat_sig1)
 
-fert_stat_sig2, fert_not_stat_sig2 = fertilizer_correlation(clean_df, f"{top_3_crops[1]}")
+fert_stat_sig2, fert_not_stat_sig2, fcorr2, fpval2 = fertilizer_correlation(clean_df, f"{top_3_crops[1]}")
 fert_stat_sig.append(fert_stat_sig2)
 fert_not_stat_sig.append(fert_not_stat_sig2)
 
-fert_stat_sig3, fert_not_stat_sig3 = fertilizer_correlation(clean_df, f"{top_3_crops[2]}")
+fert_stat_sig3, fert_not_stat_sig3, fcorr3, fpval3 = fertilizer_correlation(clean_df, f"{top_3_crops[2]}")
 fert_stat_sig.append(fert_stat_sig3)
 fert_not_stat_sig.append(fert_not_stat_sig3)
 print(f"Crops with a statistically significant correlation with fertilizer usage: {fert_stat_sig}")
@@ -33,15 +33,15 @@ print('')
 print("---PESTICIDE CORRELATION---")
 pest_stat_sig = []
 pest_not_stat_sig = []
-pest_stat_sig1, pest_not_stat_sig1 = pesticide_correlation(clean_df, f"{top_3_crops[0]}")
+pest_stat_sig1, pest_not_stat_sig1, pcorr1, ppval1 = pesticide_correlation(clean_df, f"{top_3_crops[0]}")
 pest_stat_sig.append(pest_stat_sig1)
 pest_not_stat_sig.append(pest_not_stat_sig1)
 
-pest_stat_sig2, pest_not_stat_sig2 = pesticide_correlation(clean_df, f"{top_3_crops[1]}")
+pest_stat_sig2, pest_not_stat_sig2, pcorr2, ppval2 = pesticide_correlation(clean_df, f"{top_3_crops[1]}")
 pest_stat_sig.append(pest_stat_sig2)
 pest_not_stat_sig.append(pest_not_stat_sig2)
 
-pest_stat_sig3, pest_not_stat_sig3 = pesticide_correlation(clean_df, f"{top_3_crops[2]}")
+pest_stat_sig3, pest_not_stat_sig3, pcorr3, ppval3 = pesticide_correlation(clean_df, f"{top_3_crops[2]}")
 pest_stat_sig.append(pest_stat_sig3)
 pest_not_stat_sig.append(pest_not_stat_sig3)
 print(f"Crops with a statistically significant correlation with pesticide usage: {pest_stat_sig}")
@@ -53,15 +53,15 @@ print("---WATER CORRELATION---")
 water_stat_sig = []
 water_not_stat_sig = []
 
-water_stat_sig1, water_not_stat_sig1 = water_correlation(clean_df, f"{top_3_crops[0]}")
+water_stat_sig1, water_not_stat_sig1, wcorr1, wpval1 = water_correlation(clean_df, f"{top_3_crops[0]}")
 water_stat_sig.append(water_stat_sig1)
 water_not_stat_sig.append(water_not_stat_sig1)
 
-water_stat_sig2, water_not_stat_sig2 = water_correlation(clean_df, f"{top_3_crops[1]}")
+water_stat_sig2, water_not_stat_sig2, wcorr2, wpval2 = water_correlation(clean_df, f"{top_3_crops[1]}")
 water_stat_sig.append(water_stat_sig2)
 water_not_stat_sig.append(water_not_stat_sig2)
 
-water_stat_sig3, water_not_stat_sig3 = water_correlation(clean_df, f"{top_3_crops[2]}")
+water_stat_sig3, water_not_stat_sig3, wcorr2, wpval2 = water_correlation(clean_df, f"{top_3_crops[2]}")
 water_stat_sig.append(water_stat_sig3)
 water_not_stat_sig.append(water_not_stat_sig3)
 print(f"Crops with a statistically significant correlation with water usage: {water_stat_sig}")
