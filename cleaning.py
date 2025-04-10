@@ -45,9 +45,6 @@ def data_cleaning(df_path):
     top_3_crops = popular_by_yield.head(3).index.tolist()
     print(f"Top 3 crops by yield: {top_3_crops}")
 
-    # Create encoded dataset for modeling
-    encoded_df = pd.get_dummies(clean_df, columns=['Irrigation_Type', 'Soil_Type'])
-
     return clean_df, top_3_crops
 
 
