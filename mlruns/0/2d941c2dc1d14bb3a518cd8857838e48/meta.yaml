@@ -1,0 +1,15 @@
+artifact_uri: file:///home/amyint/miniconda3/Farming/farming_analysis/mlruns/0/2d941c2dc1d14bb3a518cd8857838e48/artifacts
+end_time: 1744299638431
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2d941c2dc1d14bb3a518cd8857838e48
+run_name: brawny-shrike-765
+run_uuid: 2d941c2dc1d14bb3a518cd8857838e48
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744251568424
+status: 4
+tags: []
+user_id: amyint

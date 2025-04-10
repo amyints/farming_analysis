@@ -1,0 +1,15 @@
+artifact_uri: file:///home/amyint/miniconda3/Farming/farming_analysis/mlruns/0/b784eca77df946a091600b6812723675/artifacts
+end_time: 1744246409453
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b784eca77df946a091600b6812723675
+run_name: rogue-turtle-66
+run_uuid: b784eca77df946a091600b6812723675
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744241098346
+status: 4
+tags: []
+user_id: amyint

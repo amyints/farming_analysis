@@ -1,0 +1,15 @@
+artifact_uri: file:///home/amyint/miniconda3/Farming/farming_analysis/mlruns/0/c659494e163e445cba03dc9153ff4aac/artifacts
+end_time: 1744251179276
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c659494e163e445cba03dc9153ff4aac
+run_name: indecisive-hare-207
+run_uuid: c659494e163e445cba03dc9153ff4aac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744247061475
+status: 4
+tags: []
+user_id: amyint

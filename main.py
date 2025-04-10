@@ -2,13 +2,13 @@ from cleaning import data_cleaning
 from analysis import fertilizer_correlation, pesticide_correlation, water_correlation, irrigation_correlation, soil_correlation
 from model.modeling import data_modeling
 from model.simulating import simulate
+from data.deleting import remove_data
 
 # clean data using cleaning.py
 df_path = "./data/agriculture_dataset.csv"
 clean_df, top_3_crops = data_cleaning(df_path)
 print(f"These top 3 crop will be referenced to analyze: {top_3_crops}")
 clean_df.to_csv("./data/cleaned_agriculture_dataset.csv", index=False)
-#encoded_df.to_csv("./data/encoded_agriculter_dataset.csv", index=False)
 
 # Fertilizer Correlation and Statistical Significance
 print("---FERTILIZER CORRELATION---")
@@ -114,4 +114,5 @@ print('')
 
 model, predictions, X_train, X_test, y_train, y_test = data_modeling(clean_df)
 
-simulate(clean_df, model)
+simulator = simulate(clean_df, model)
+#remove_data(df_path, "./data/cleaned_agriculture_dataset.csv")

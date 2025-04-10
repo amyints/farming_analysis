@@ -1,5 +1,5 @@
 artifact_uri: file:///home/amyint/miniconda3/Farming/farming_analysis/mlruns/0/3a0073683f7d42c1a2b832531c960448/artifacts
-end_time: null
+end_time: 1744234215506
 entry_point_name: ''
 experiment_id: '0'
 lifecycle_stage: active
@@ -10,6 +10,6 @@ source_name: ''
 source_type: 4
 source_version: ''
 start_time: 1744229322745
-status: 1
+status: 4
 tags: []
 user_id: amyint

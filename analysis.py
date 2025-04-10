@@ -11,7 +11,7 @@ def fertilizer_correlation(df, crop_name):
     not_stat_sig = None
 
     # Identify whether there is a statistically significant correlation
-    if pval <= 0.5:
+    if pval >= 0.05:
         stat_sig = crop_name
         #print(f"There is a statistically significant correlation between fertilizer usage and {crop_name} yield.")
     else:
@@ -52,7 +52,7 @@ def pesticide_correlation(df, crop_name):
     not_stat_sig = None
 
     # Identify whether there is a statistically significant correlation
-    if pval <= 0.5:
+    if pval >= 0.05:
         stat_sig = crop_name
         #print(f"There is a statistically significant correlation between pesticide usage and {crop_name} yield.")
     else:
@@ -93,7 +93,7 @@ def water_correlation(df, crop_name):
     not_stat_sig = None
 
     # Identify whether there is a statistically significant correlation
-    if pval <= 0.5:
+    if pval >= 0.05:
         stat_sig = crop_name
         #print(f"There is a statistically significant correlation between water usage and {crop_name} yield.")
     else:

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/amyint/miniconda3/Farming/farming_analysis/mlruns/0/904fe826de7c4be39c83a15d9be98bc3/artifacts
+end_time: 1744306993399
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 904fe826de7c4be39c83a15d9be98bc3
+run_name: salty-dolphin-342
+run_uuid: 904fe826de7c4be39c83a15d9be98bc3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744306917843
+status: 4
+tags: []
+user_id: amyint
