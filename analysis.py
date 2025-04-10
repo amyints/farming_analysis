@@ -39,7 +39,7 @@ def fertilizer_correlation(df, crop_name):
         print(f"There is a perfect, negative correlation between fertilizer usage and {crop_name} yield.")
 
     print('')
-    return stat_sig, not_stat_sig
+    return stat_sig, not_stat_sig, corr, pval
 
 # PESTICIDE CORRELATION
 def pesticide_correlation(df, crop_name):
@@ -80,7 +80,7 @@ def pesticide_correlation(df, crop_name):
         print(f"There is a perfect, negative correlation between pesticide usage and {crop_name} yield.")
 
     print('')
-    return stat_sig, not_stat_sig
+    return stat_sig, not_stat_sig, corr, pval
     
 # WATER CORRELATION
 def water_correlation(df, crop_name):
@@ -121,7 +121,7 @@ def water_correlation(df, crop_name):
         print(f"There is a perfect, negative correlation between water usage and {crop_name} yield.")
 
     print('')
-    return stat_sig, not_stat_sig
+    return stat_sig, not_stat_sig, corr, pval
 
 # IRRIGATION TYPE CORRELATION
 def irrigation_correlation(df, crop_name):
