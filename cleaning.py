@@ -34,9 +34,10 @@ def data_cleaning(df_path):
     clean_df['fertilizer_to_yield_ratio'] = clean_df['Yield(tons)'] / clean_df['Fertilizer_Used(tons)']
     clean_df['pesticide_to_yield_ratio'] = clean_df['Yield(tons)'] / clean_df['Pesticide_Used(kg)']
     clean_df['water_to_yield_ratio'] = clean_df['Yield(tons)'] / clean_df['Water_Usage(cubic meters)']
-    clean_df['fertilizer_to_acre_ratio'] = clean_df['Farm_Area(acres)'] / clean_df['Fertilizer_Used(tons)']
-    clean_df['pesticide_to_acre_ratio'] = clean_df['Farm_Area(acres)'] / clean_df['Pesticide_Used(kg)']
-    clean_df['water_to_acre_ratio'] = clean_df['Farm_Area(acres)'] / clean_df['Water_Usage(cubic meters)']
+    clean_df['fertilizer_to_acre_ratio'] = clean_df['Fertilizer_Used(tons)'] / clean_df['Farm_Area(acres)']
+    clean_df['pesticide_to_acre_ratio'] = clean_df['Pesticide_Used(kg)'] / clean_df['Farm_Area(acres)']
+    clean_df['water_to_acre_ratio'] = clean_df['Water_Usage(cubic meters)'] / clean_df['Farm_Area(acres)']
+
 
 
     # Select top 3 crops
@@ -47,6 +48,6 @@ def data_cleaning(df_path):
     # Create encoded dataset for modeling
     encoded_df = pd.get_dummies(clean_df, columns=['Irrigation_Type', 'Soil_Type'])
 
-    return clean_df, top_3_crops, encoded_df
+    return clean_df, top_3_crops
 
 
